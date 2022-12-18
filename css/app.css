@@ -1,0 +1,165 @@
+/* 
+/* 
+ejemplos
+
+todos los h2 dentro de una seccion
+section h2{
+}
+  
+todos los enlaces dentro de los nav   
+nav a{
+}
+
+al primero de todos los a dentro los nav se modifica
+nav a:first-child{
+}
+
+al ultimo de todos los a dentro de los nav se modifica
+nav a:last-child{
+}
+
+al 4 de todos los a dentro de los nav se modifica 
+el cuatro se va modificando dependiendo del que quieras
+modificar
+nav a:nth-child(4){
+}
+
+.clase{
+
+}
+
+#id{
+}
+
+*/
+
+/* 
+
+.sobre-nosotros{
+  color de fondo
+  background-color:red;
+  ancho
+  wdith:200px;
+  ATENTO CUANDO COLOCAS PADDING SE SUMA ALOS 200PX Y VA CRECIENDO
+  SE AGREGA ESPACIO DENTRO DEL ELEMENTO Y HACE QUE SE RELLENE 
+  padding:25px;
+  AL AGREAGAR LOS 25X CON ESTE ELEMENTO HACES QUE NO SE PASE DE LOS 200PX
+  OSEA NO  SE VA SUMAR COMO PASO ANTERIOR MENTE
+  box-sizing:border-box;
+  ACA LOS SUMA TODOS COMO FORMA NORMAL
+  box-sizing:content-box;
+  ACA SEPARA LOS ELEMENTOS UNO DE LOS OTROS, LES DA ESPACIO
+  margin-top:24px;
+}
+
+LOS ELEMENTOS INLINE NO SE LE PUDEN COLOCAR WIDTH NI HIGTH PERO SI LOS 
+TRANFORMAS EN BLOCK SI SE PUEDE 
+
+PARA CABIAR el bloque
+display: block; lo cambias a block
+display: inline; cada elemento se posicioona al lado del otro no hacia abajo
+display:inline-block; permite que se ganen los elementos uno al ladod el otro
+y tambien se le puede colocar width y higth 
+
+
+
+
+/* con esta propiedad puedes hacer que todas las imagenes 
+se adapten al espacio del div no que ocupe el tamanio real 
+de esa imagen*/
+img {
+  max-width: 100%;
+  /** esto limina el espacio de las imagenes con los botones*/
+  display: block;
+}
+/* aqui tomamos todos los h2 y los centramos*/
+h2 {
+  text-align: center;
+}
+
+/* NOMBRE DE SITIO*/
+.nombre-sitio {
+  /* se cambia la fuente del elemento */
+  font-size: 30px;
+  /* cambias el color recomendado asi */
+  color: #000000;
+  /* centras el texto o elemento*/
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+a {
+  color: #000000;
+  /*le quitamos la ralla que esta abajo*/
+  text-decoration: none;
+}
+
+/* esto hace que el contenido no quede pegado ala orilla */
+.contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contenedor-navegacion {
+  /*se le agrega un borde al nav  */
+  border-style: solid;
+  /*  se le agrega la anchura al borde */
+  border-width: 2px;
+
+  /* color al borde*/
+  border-color: #f0f8ff;
+}
+
+/* NAVAR*/
+.nav-principal {
+  /*  bordes hacia arriba y abajo*/
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /*FLEXBOX*/
+  /* se le agrega flex este funcion al primer hijo directo del div */
+  display: flex;
+  /* centra el contenido
+  CUANDO ES ROW SE OCUPAN JUSTIFY-CONTENCT CUANDO ES COLUMN
+  SE OCUPA ALING-ITEMS*/
+  /*SE  PUEDE VER QUE OCUPAR EN INSPECCION Y COLOLCAS FLEX TENIENDO 
+  LA PROPIEDAD YA DECLARADA*/
+  /* space around separa los elementos */
+  justify-content: space-around;
+}
+
+/* IMAGEN PRINCIPAL*/
+.hero {
+  /* si solo colas esto no te va salir la imagen porque necesita un height y un widht*/
+  background-image: url(../img/principal.jpg);
+  /* le damos la altura*/
+  height: 580px;
+  /* para que no se repita le colocamos no repeat*/
+  background-repeat: no-repeat;
+  /* le damos cover para que ocupe todo el espacio disponible*/
+  background-size: cover;
+}
+
+/* LISTADO CATEGORIAS*/
+.listado-categorias {
+  /* grid ocupa fraciones*/
+  display: grid;
+  /* hace que se junten las fotos y poder empezar a acomodar */
+  /* quiero 3 columnas con 1 fraccion cada una para que sean iguales
+  esto se va adaptando solo automaticamente es hermoso aijaijia*/
+  grid-template-columns: repeat(3, 1fr);
+  /* le doy espacio entre imagenes*/
+  gap: 20px;
+}
+.categoria a {
+  text-align: center;
+  /* esta en linea asique nunca se va a poner al medio lo cambias a block
+  para que ocupe todo el espacio*/
+  display: block;
+  padding: 20px;
+  font-size: 20px;
+}
+/* le agregas el fondo al boton cuando estes sobre el*/
+.categoria a:hover {
+  background-color: #1278cb;
+  color: #f0f8ff;
+}
