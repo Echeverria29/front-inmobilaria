@@ -77,16 +77,24 @@ h2 {
   text-align: center;
 }
 
+html {
+  /* hacemos que 1 rem valga 10 px esto sirve para adaptar mejor la 
+  pagina a diferentes pantallas con rem*/
+  font-size: 62.5%; /* 1 rem = 10 px*/
+}
+body {
+  font-size: 1.6rem;
+}
 /* NOMBRE DE SITIO*/
 .nombre-sitio {
   /* se cambia la fuente del elemento */
-  font-size: 30px;
+  font-size: 4rem;
   /* cambias el color recomendado asi */
   color: #000000;
   /* centras el texto o elemento*/
   text-align: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 a {
   color: #000000;
@@ -96,7 +104,7 @@ a {
 
 /* esto hace que el contenido no quede pegado ala orilla */
 .contenedor {
-  max-width: 1200px;
+  max-width: 120rem;
   margin: 0 auto;
 }
 
@@ -113,8 +121,8 @@ a {
 /* NAVAR*/
 .nav-principal {
   /*  bordes hacia arriba y abajo*/
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   /*FLEXBOX*/
   /* se le agrega flex este funcion al primer hijo directo del div */
   display: flex;
@@ -132,7 +140,7 @@ a {
   /* si solo colas esto no te va salir la imagen porque necesita un height y un widht*/
   background-image: url(../img/principal.jpg);
   /* le damos la altura*/
-  height: 580px;
+  height: 58rem; /* 580 px*/
   /* para que no se repita le colocamos no repeat*/
   background-repeat: no-repeat;
   /* le damos cover para que ocupe todo el espacio disponible*/
@@ -155,8 +163,8 @@ a {
   /* esta en linea asique nunca se va a poner al medio lo cambias a block
   para que ocupe todo el espacio*/
   display: block;
-  padding: 20px;
-  font-size: 20px;
+  padding: 2rem;
+  font-size: 2rem;
 }
 /* le agregas el fondo al boton cuando estes sobre el*/
 .categoria a:hover {
