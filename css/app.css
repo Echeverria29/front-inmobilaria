@@ -67,25 +67,50 @@ y tambien se le puede colocar width y higth
 /* con esta propiedad puedes hacer que todas las imagenes 
 se adapten al espacio del div no que ocupe el tamanio real 
 de esa imagen*/
-img {
-  max-width: 100%;
-  /** esto limina el espacio de las imagenes con los botones*/
-  display: block;
-}
+
 /* aqui tomamos todos los h2 y los centramos*/
-h2 {
-  text-align: center;
-}
 
 html {
   /* hacemos que 1 rem valga 10 px esto sirve para adaptar mejor la 
   pagina a diferentes pantallas con rem*/
   font-size: 62.5%; /* 1 rem = 10 px*/
+  /* esto es para cuando le cololes un with a un elemento y despues padding
+  no modifique el tamanio*/
+  box-sizing: border-box;
 }
+h1 {
+  font-size: 5rem;
+}
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 3rem;
+  /* eliminar el margen a todos los headings */
+  margin: 0 0 5rem 0;
+}
+
 body {
   font-size: 1.6rem;
+  /* esto es para que se separen un poco las lineas de los parrafos abajo*/
+  line-height: 2;
 }
-/* NOMBRE DE SITIO*/
+
+a {
+  color: #000000;
+  /*le quitamos la ralla que esta abajo*/
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  /** esto limina el espacio de las imagenes con los botones*/
+  display: block;
+}
+.categorias h2 {
+  text-align: center;
+}
 .nombre-sitio {
   /* se cambia la fuente del elemento */
   font-size: 4rem;
@@ -95,11 +120,6 @@ body {
   text-align: center;
   margin-top: 5rem;
   margin-bottom: 5rem;
-}
-a {
-  color: #000000;
-  /*le quitamos la ralla que esta abajo*/
-  text-decoration: none;
 }
 
 /* esto hace que el contenido no quede pegado ala orilla */
@@ -158,6 +178,12 @@ a {
   /* le doy espacio entre imagenes*/
   gap: 20px;
 }
+
+.categorias {
+  /* recuerda que se le elimino el padding a todos los elementos
+  arriba, hay que agregarle un poco*/
+  padding-top: 5rem;
+}
 .categoria a {
   text-align: center;
   /* esta en linea asique nunca se va a poner al medio lo cambias a block
@@ -170,4 +196,30 @@ a {
 .categoria a:hover {
   background-color: #1278cb;
   color: #f0f8ff;
+}
+
+.sobre-nosotros {
+  /*
+
+  background-image: linear-gradient(to right, black 50%, red 100%);
+  */
+
+  background-image: linear-gradient(
+      /* con esto se ve la imagen al princpio y va cambiando hasta quedar
+    con el color celeste*/
+        to right,
+      /* con esto vamos destapando la imagen*/ transparent 60%,
+      #1278cb 50%,
+      #1278cb 100%
+    ),
+    url(../img/nosotros.jpg);
+  /* con esto se ve la imagen al princpio y va cambiando hasta quedar
+    con el color celeste*/
+
+  /*centramos la imagen*/
+  padding: 10rem 0;
+  background-repeat: no-repeat;
+  background-size: 100%, 120rem;
+  background-position: left center;
+  margin-top: 2rem;
 }
