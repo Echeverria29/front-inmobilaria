@@ -108,9 +108,7 @@ img {
   /** esto limina el espacio de las imagenes con los botones*/
   display: block;
 }
-.categorias h2 {
-  text-align: center;
-}
+
 .nombre-sitio {
   /* se cambia la fuente del elemento */
   font-size: 4rem;
@@ -208,8 +206,8 @@ img {
       /* con esto se ve la imagen al princpio y va cambiando hasta quedar
     con el color celeste*/
         to right,
-      /* con esto vamos destapando la imagen*/ transparent 60%,
-      #1278cb 50%,
+      /* con esto vamos destapando la imagen*/ transparent 50%,
+      #1278cb 70%,
       #1278cb 100%
     ),
     url(../img/nosotros.jpg);
@@ -222,4 +220,18 @@ img {
   background-size: 100%, 120rem;
   background-position: left center;
   margin-top: 2rem;
+}
+
+.sobre-nosotros-grid {
+  display: flex;
+  justify-content: flex-end;
+}
+.texto-nosotros {
+  flex-basis: 50%;
+}
+
+/*UTILIDADES ASI LO HACE BOOTSTRAP 
+despues colocas la clase en el elemento que quieres que se centre*/
+.text-center {
+  text-align: center;
 }
